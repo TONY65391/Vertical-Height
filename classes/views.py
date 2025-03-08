@@ -9,3 +9,7 @@ from django.contrib import messages
 def index(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render(request = request))
+
+def python(request):
+    template = loader.get_template('python.html')
+    return HttpResponse(template.render(request = request))

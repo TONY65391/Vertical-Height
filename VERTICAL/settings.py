@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3vb1ol1^qcfrp0=6f*3vkdg+l+t#hv_61h!)mq5*wt6&^vu$(#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -80,10 +80,10 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tony_database_05n3',
-        'USER': 'tony_database_05n3_user',
-        'PASSWORD': 'gyb4z0lSObZxD8aiUFBNPpuEvq8deSoY',
-        'HOST': 'dpg-cugm359u0jms73fnt5p0-a.oregon-postgres.render.com',
+        'NAME': 'database_wxxr',
+        'USER': 'database_wxxr_user',
+        'PASSWORD': 'IFefSvZgy2saV9JABhug9jEvOt6epVcp',
+        'HOST': 'dpg-cv5qup7noe9s73bn1g60-a.oregon-postgres.render.com',
         'PORT': '5432'
     }
 }

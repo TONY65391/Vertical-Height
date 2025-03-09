@@ -1,0 +1,109 @@
+* {margin: 0; padding: 0%; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; transition: 0.2s;}
+.first-head {transition: 0.6s; padding: 20px; width: 100%; background: white; margin-bottom: 10px; z-index: 1; box-shadow: 3px 5px 15px black; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; }
+.first-head p {float: right; color: black; padding: 0px 20px 10px 20px; transition: 0.2s; margin: 2vw 10px 1vw 10px; font-weight: 700;}
+.first-head p:hover {border-bottom: 3px solid rgba(100, 0, 0, 0.8); transition: 0.2s; color: rgba(100, 0, 0, 0.8);}
+.first-head img {width: 5vw; float: left; margin-top: 1vh;}
+
+.first-head::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.content {width: 90%; margin: auto; transition: 0.5s;}
+.content p,h4,h2 {font-size: 1.5vw; line-height: 7vh; transition: 0.5s;}
+#cond, .content img {float: left;}
+.data {width: 100%; margin-top: 10px;}
+.data p {margin-left: 2px;}
+.form p {float: left; padding: 5px 15px; color: black;}
+.form img {float: right; margin-top: 3.3vh; padding-right: 10px; width: 37px;}
+.form {width: fit-content; background: rgba(1000, 0, 0, 0.6); margin-top: 20px; margin-bottom: 30px; border-radius: 8px; box-shadow: 2px 2px 10px black;}
+.form:hover {background: black; transition: 0.4s;}
+.form:hover p {color: white;}
+.form::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.final {float: left; width: 100%; box-shadow: 0px 0px 30px black; margin-top: 50px; border-top-left-radius: 15px; border-top-right-radius: 15px;}
+.final-links a, .first-head a{color: black; text-decoration: none;}
+.final-links p {width: fit-content; float: left; margin: 5px; font-size: 1.2vw; font-weight: 700; margin-bottom: 20px; padding: 12px; margin-top: 30px; transition: 0.2s;}
+.final-links {height: auto; border: none; width: 50%; float: left; margin: 0; margin-top: 30px; margin-left: 10px; padding-bottom: 0px;}
+.final-links p:hover {border-bottom: 3px solid rgba(100, 0, 0, 0.8); transition: 0.2s; color: rgba(100, 0, 0, 0.8);}
+.contacts {width: 45%; font-size: 1.5vw; float: right; margin: 0; margin-top: 50px; margin-right: 30px; text-align: center;}
+#last { border-bottom: 1px solid black; padding-bottom: 5px;}
+.credit {margin-top: 10px;}
+.data img {width: 37px; margin-top: 2.2vh;}
+.final-links::after{
+    clear: both;
+    display: table;
+    content: "";
+}
+
+@media screen and (max-width:840px) {
+    .first-head p {display: none;}
+    .first-head img {width: 11vw; margin-top: 0;}
+    .content {width: 90%;}    
+    .content p,h4,h2 {font-size: 2.5vw; line-height: 4.5vh;}
+    .data img {width: 37px; margin-top: 1vh;}
+    .final {width: 100%; margin-bottom: 5px;}
+    .final-links {height: auto; border: none; width: 50%; float: left; margin: 0; margin-top: 30px; margin-left: 10px; padding-bottom: 0px;}
+    .final-links p {margin-bottom: 0px; float: left; margin: 0; width: fit-content; margin: auto; height: 40px; margin-top: 10px; display: block; text-align: center; font-size: 2vw;}
+    .contacts {font-size: 2vw; float: right; margin: 0; width: fit-content; margin-top: 50px; margin-right: 30px;}
+    .form img {margin-top: 2vh;}
+}
+@media screen and (min-width:840px) {
+    .dropdown{display: none;} 
+    .first-head h4 {display: none;}   
+}
+
+.data::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.dropdown{
+    float: right;
+    position: relative;
+    margin-top: 3vw;
+}
+.dropbtn {
+    border: none;
+    padding: 5px;
+}
+.dropbtn div{
+    height: 2px;
+    margin: 3px;
+    background: black;
+    width: 20px;
+    border-radius: 15px;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    right: 0;
+    background: black;
+    border-radius: 10px;
+    width: 150px;
+    height: auto;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: white;
+    display: block;
+    padding: 10px;
+    width: fit-content;
+    margin: auto;
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 2.5vw;
+}
+.dropdown-content a:hover {
+    color: red;
+    transition: 0.5s;
+}
+.demos {display: none; float: right; right: 0; margin-top: 3vw; margin-right: 10px;}
+.show {display: block;}

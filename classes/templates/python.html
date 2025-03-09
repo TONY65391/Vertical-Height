@@ -5,11 +5,32 @@
     <title>Javascript Test Page</title>
 </head>
     <style>
-        .dropdown {float: right; position: relative;}
-        .dropbtn div {height: 2px; margin: 3px; background: black; width: 20px;}
-        .dropdown-content {position: absolute; right: 0; width: 150px; background: black; display: none; border-radius: 15px;}
-        .dropdown-content p {color: white; font-weight: 600; text-align: center; transition: 0.4s; width: fit-content; margin: auto; padding: 10px;}
-        .dropdown-content p:hover {color: burlywood; transition: 0.4s;}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: black;
+            width: 200px;
+            right: 0;
+            border-radius: 10px;
+        }
+        .dropdown {
+            float: right;
+            position: relative;
+        }
+        .dropbtn {border: none;}
+        .dropbtn div {
+            height: 2px;
+            margin: 3px;
+            background: black;
+            width: 20px;
+        }
+        .dropdown-content p {
+            color: white;
+            font-weight: 600;
+            padding: 10px;
+            width: fit-content;
+            margin: auto;
+        }
         .show {display: block;}
     </style>
 <body>
@@ -33,18 +54,18 @@
         function myfunction() {
             document.getElementById('mydropdown').classList.toggle('show')
         }
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-                }
-            }
-        }
+        // window.onclick = function(event) {
+        //     if (!event.target.matches('.dropbtn')) {
+        //         var dropdowns = document.getElementsByClassName("dropdown-content");
+        //         var i;
+        //         for (i = 0; i < dropdowns.length; i++) {
+        //         var openDropdown = dropdowns[i];
+        //         if (openDropdown.classList.contains('show')) {
+        //             openDropdown.classList.remove('show');
+        //         }
+        //         }
+        //     }
+        // }
     </script>
 </body>
 </html>

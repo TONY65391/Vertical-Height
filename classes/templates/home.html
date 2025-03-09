@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
     <link rel="icon" type="image/x-icon" href="/static/vertical.jpg">
     <title>Home - Vertical Height Academy International Schools</title>
 </head>
 <body>
     <div class="first-head">
         <img src="/static/vertical.jpg" alt="">
-        <p>Facilities</p>
-        <p>Contact</p>
-        <p>Program</p>
-        <p>About us</p>
-        <p>Admission</p>
+        <a href="facilities/"><p>Facilities</p></a>
+        <a href="contact/"><p>Contact</p></a>
+        <a href="program/"><p>Program</p></a>
+        <a href="about_us/"><p>About us</p></a>
+        <a href="admission/"><p>Admission</p></a>
         <p style="border-bottom: 3px solid rgba(100, 0, 0, 0.8); color: rgba(100, 0, 0, 0.8);">Home</p>
 
         <div class="dropdown">
@@ -24,14 +24,15 @@
                 <div></div>
             </button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="">Home</a>
-                <a href="">Admission</a>
-                <a href="">About us</a>
-                <a href="">Program</a>
-                <a href="">Contact</a>
-                <a href="">Facilities</a>
+                <a>Home</a>
+                <a href="admission/">Admission</a>
+                <a href="about_us/">About us</a>
+                <a href="program/">Program</a>
+                <a href="contact/">Contact</a>
+                <a href="facilities/">Facilities</a>
             </div>
         </div>
+        <h4 id="demo" class="demos"></h4>
     </div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to Top">Top</button>
@@ -73,7 +74,7 @@
             </div>
             <div class="mission">
                 <h3>OUR MISSION</h3>
-                <p>Empowered our <b><i>FAITH IN THE ALMIGHTY GOD, VERTICAL HEIGHT ACADEMY</i></b> is committed to providing a holistic education that integrates academic rigor, spiritual growth and character development. We aim to inspire students to achieve their full potential, cultivate a sense of purpose and service and become active citizens who shine lights in their communities, reflecting the love and values of our <b><i>LORD JESUS CHRIST</i></b></p>
+                <p>Empowered by our <b><i>FAITH IN THE ALMIGHTY GOD, VERTICAL HEIGHT ACADEMY</i></b> is committed to providing a holistic education that integrates academic rigor, spiritual growth and character development. We aim to inspire students to achieve their full potential, cultivate a sense of purpose and service and become active citizens who shine lights in their communities, reflecting the love and values of our <b><i>LORD JESUS CHRIST</i></b></p>
                 <h4 id="rm">Read More</h4>
             </div>
             <div class="vision">
@@ -85,23 +86,33 @@
     </div> 
 
     <div class="final">
-        <div class="final-links">
-            <p style="color: orange; border-bottom: 3px solid orange;">Home</p>
-            <p>Admission</p>
-            <p>About us</p>
-            <p>Program</p>
-            <p>Contact</p>
-            <p>Facilities</p>
+        <div class="links-credits">
+            <div class="final-links">
+                <p style="color: orange; border-bottom: 3px solid orange;">Home</p>
+                <a href="admission/"><p>Admission</p></a>
+                <a href="about_us/"><p>About us</p></a>
+                <a href="program/"><p>Program</p></a>
+                <a href="contact/"><p>Contact</p></a>
+                <a href="facilities/"><p>Facilities</p></a>
+            </div>
         </div>
-        <div class="contacts">
-            <p>+23438776537</p>
-            <p>+23425468909</p>
+        <div>
+            <div class="contacts">
+                <p>+23438776537</p>
+                <p id="last">+23425468909</p>
+                <div class="credit">
+                    <p>Copyright @ Vertical Height Academy</p>
+                    <p>Developer ~ ANONYMOUS</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
         function myfunction() {
             document.getElementById('myDropdown').classList.toggle("show");
+            document.getElementById('demo').innerText='Click on menu button to close menu';
+            document.getElementById('demo').classList.toggle('show')
         }
 
         function topFunction() {
@@ -117,18 +128,20 @@
                 mybutton.style.border = 'none'
             }
         }
-        window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-            }
-        }
-    } 
+
+
+    //     window.onclick = function(event) {
+    //     if (!event.target.matches('.dropbtn')) {
+    //         var dropdowns = document.getElementsByClassName("dropdown-content");
+    //         var i;
+    //         for (i = 0; i < dropdowns.length; i++) {
+    //         var openDropdown = dropdowns[i];
+    //         if (openDropdown.classList.contains('show')) {
+    //             openDropdown.classList.remove('show');
+    //         }
+    //         }
+    //     }
+    // } 
     </script>
     <script src="/static/index.js"></script>
 </body>

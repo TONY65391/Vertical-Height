@@ -6,10 +6,15 @@ from django.contrib import messages
 
 # Create your views here.
 
-def index(request):
-    template = loader.get_template('index.html')
+def home(request):
+    template = loader.get_template('home.html')
     return HttpResponse(template.render(request = request))
 
 def python(request):
     template = loader.get_template('python.html')
+    return HttpResponse(template.render(request = request))
+
+def admission(request):
+    print(request)
+    template = loader.get_template('admission.html')
     return HttpResponse(template.render(request = request))

@@ -1,0 +1,118 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission - Vertical Height Academy</title>
+    <link rel="icon" type="image/x-icon" href="/static/vertical.jpg">
+    <link rel="stylesheet" href="{% static 'admission.css' %}">
+</head>
+<body>
+    <div class="first-head">
+        <img src="/static/vertical.jpg" alt="">
+        <a href="facilities/"><p>Facilities</p></a>
+        <a href="contact/"><p>Contact</p></a>
+        <a href="program/"><p>Program</p></a>
+        <a href="about_us/"><p>About us</p></a>
+        <p style="border-bottom: 3px solid rgba(100, 0, 0, 0.8); color: rgba(100, 0, 0, 0.8);">Admission</p>
+        <a href=".."><p>Home</p></a>
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <div id="mydropdown" class="dropdown-content">
+                <a href="..">Home</a>
+                <a>Admission</a>
+                <a href="about_us/">About us</a>
+                <a href="program/">Program</a>
+                <a href="contact/">Contact</a>
+                <a href="facilities/">Facilities</a>
+            </div>
+        </div>
+        <h4 id="demo" class="demos"></h4>
+    </div>
+    <img src="/static/kids.jpg" width="100%" alt="">
+    <div class="content">
+        <p>Follow the steps below to apply to Vertical Height Academy</p>
+        <h2>STEP 1 - Pre-Registration</h2>
+        <p>You are to carefully provide your valid details in the form below and click on "Proceed".</p>
+        <h2>STEP 2 - Application Fee</h2>
+        <p>You will then be redirected to a page with options to pay a <b><u>non-refundable</u></b> application fee.</p>
+        <h2>STEP 3 - Download Registration Form</h2>
+        <p>After completing your payment, you will be able to download the registration form for Vertical Height Academy</p>
+        <h4>Below are the documents that would be required during the registration process :</h4>
+        <div class="data">
+            <img src="/static/script.png" alt="">
+            <p id="cond">Applicant's Biodata</p>
+        </div>
+        <div class="data">
+            <img src="/static/script.png" alt="">
+            <p id="cond">O' Level result(awaiting data is acceptable)</p>
+        </div>
+        <div class="data">
+            <img src="/static/script.png" alt="">
+            <p id="cond">Functional e-mail address and phone number</p>
+        </div>
+        <div class="data">
+            <img src="/static/script.png" alt="">
+            <p id="cond">Passports Photographs</p>
+        </div>
+        <div class="data">
+            <img src="/static/script.png" alt="">
+            <p id="cond">National Identification Number (NIN) Upload</p>
+        </div>
+        <a href="">
+            <div class="form">
+                <p>Proceed to Pre-Registration Form</p>
+                <img src="/static/script.png" alt="">
+            </div>
+        </a>
+    </div>
+    
+    <div class="final">
+        <div class="links-credits">
+            <div class="final-links">
+                <a href=".."><p>Home</p></a>
+                <p style="color: rgba(1000, 0, 0, 0.8); border-bottom: 3px solid rgba(1000, 0, 0, 0.8);">Admission</p>
+                <a href="about_us/"><p>About us</p></a>
+                <a href="program/"><p>Program</p></a>
+                <a href="contact/"><p>Contact</p></a>
+                <a href="facilities/"><p>Facilities</p></a>
+            </div>
+        </div>
+        <div>
+            <div class="contacts">
+                <p>+23438776537</p>
+                <p id="last">+23425468909</p>
+                <div class="credit">
+                    <p>Copyright @ Vertical Height Academy</p>
+                    <p>Developer ~ ANONYMOUS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            document.getElementById('mydropdown').classList.toggle('show');
+            document.getElementById('demo').innerText='Click on menu button to close menu';
+            document.getElementById('demo').classList.toggle('show')
+        }
+    //     window.onclick = function(event) {
+    //     if (!event.target.matches('.dropbtn')) {
+    //         var dropdowns = document.getElementsByClassName("dropdown-content");
+    //         var i;
+    //         for (i = 0; i < dropdowns.length; i++) {
+    //         var openDropdown = dropdowns[i];
+    //         if (openDropdown.classList.contains('show')) {
+    //             openDropdown.classList.remove('show');
+    //         }
+    //         }
+    //     }
+    // }
+    </script>
+</body>
+</html>

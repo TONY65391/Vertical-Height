@@ -2,70 +2,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Test Page</title>
+    <title>Javascript</title>
 </head>
+<body>
     <style>
+        * {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+        .myBtn div{width: 20px; height: 2px; margin: 3px; background: black;}
         .dropdown-content {
             display: none;
             position: absolute;
             background: black;
-            width: 200px;
-            right: 0;
-            border-radius: 10px;
+            margin-top: 5px;
+            width: 100%;
+            float: left;
+            margin-top: 100px;
         }
         .dropdown {
             float: right;
-            position: relative;
+            right: 0;
+            margin-top: 23px;
+            background: purple;
+            margin-right: 10px;
         }
-        .dropbtn {border: none;}
-        .dropbtn div {
-            height: 2px;
-            margin: 3px;
-            background: black;
-            width: 20px;
-        }
-        .dropdown-content p {
+        .dropdown-content a {
             color: white;
+            text-decoration: none;
             font-weight: 600;
-            padding: 10px;
-            width: fit-content;
-            margin: auto;
+            display: block;
+            padding: 10px 20px;
+            width: 100%;
+            transition: 0.3s;
         }
-        .show {display: block;}
-    </style>
-<body>
-    <div class="dropdown">
-        <button onclick="myfunction()" class="dropbtn">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
-        <div id="mydropdown" class="dropdown-content">
-            <p>Home</p>
-            <p>Admission</p>
-            <p>About us</p>
-            <p>Program</p>
-            <p>Contact</p>
-            <p>Facilities</p>
-        </div> 
-    </div>
+        .dropdown-content a:hover{
+            color: purple;
+            transition: 0.3s;
+        }
+        .text{display: none;}
+        .show{display: block;}
 
-    <script>
-        function myfunction() {
-            document.getElementById('mydropdown').classList.toggle('show')
+        .head p {float: left; color: white; font-size: 22; margin-left: 10px; font-weight: 600;}
+        .head {height: fit-content; transition: 0.3s; background: purple; position: relative;}
+        .height {height: 46%;}
+        .head::after{
+            content: "";
+            clear: both;
+            display: table;
         }
-        // window.onclick = function(event) {
-        //     if (!event.target.matches('.dropbtn')) {
-        //         var dropdowns = document.getElementsByClassName("dropdown-content");
-        //         var i;
-        //         for (i = 0; i < dropdowns.length; i++) {
-        //         var openDropdown = dropdowns[i];
-        //         if (openDropdown.classList.contains('show')) {
-        //             openDropdown.classList.remove('show');
-        //         }
-        //         }
-        //     }
-        // }
+    </style>
+
+    <div class="head" id="head">
+        <p>Urban Haven</p>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="myBtn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+        </div>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="">Home</a>
+            <a href="">Admission</a>
+            <a href="">About us</a>
+            <a href="">Contact</a>
+            <a href="">Facilities</a>
+        </div>
+    </div>
+    <script>
+        function myFunction(){
+            document.getElementById('myDropdown').classList.toggle('show');
+            document.getElementById('head').classList.toggle('height');
+        }
     </script>
 </body>
 </html>

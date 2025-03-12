@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="first-head">
-        <img src="/static/vertical.jpg" alt="">
+        <img src="/static/vertical.jpg" title="Vertical Height Academy" alt="">
         <a href="facilities/"><p>Facilities</p></a>
         <a href="contact/"><p>Contact</p></a>
         <a href="program/"><p>Program</p></a>
@@ -18,7 +18,7 @@
         <a href=".."><p>Home</p></a>
 
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">
+            <button onclick="myFunction()" title="Click to open menu" class="dropbtn">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -33,8 +33,9 @@
             </div>
         </div>
         <h4 id="demo" class="demos"></h4>
+        <button onclick="topfunction()" id="myBtn" title="Go to Top">&#128507;</button>
     </div>
-    <img src="/static/kids.jpg" width="100%" alt="">
+    <img id="start" src="/static/j1_class.jpg" width="100%" alt="">
     <div class="content">
         <p>Follow the steps below to apply to Vertical Height Academy</p>
         <h2>STEP 1 - Pre-Registration</h2>
@@ -45,32 +46,34 @@
         <p>After completing your payment, you will be able to download the registration form for Vertical Height Academy</p>
         <h4>Below are the documents that would be required during the registration process :</h4>
         <div class="data">
-            <img src="/static/script.png" alt="">
-            <p id="cond">Applicant's Biodata</p>
+            <p>&#128504;</p>
+            <p>Applicant's Biodata</p>
         </div>
         <div class="data">
-            <img src="/static/script.png" alt="">
-            <p id="cond">O' Level result(awaiting data is acceptable)</p>
+            <p>&#128504;</p>
+            <p>O' Level result(awaiting data is acceptable)</p>
         </div>
         <div class="data">
-            <img src="/static/script.png" alt="">
-            <p id="cond">Functional e-mail address and phone number</p>
+            <p>&#128504;</p>
+            <p>Functional e-mail address and phone number</p>
         </div>
         <div class="data">
-            <img src="/static/script.png" alt="">
-            <p id="cond">Passports Photographs</p>
+            <p>&#128504;</p>
+            <p>Passports Photographs</p>
         </div>
         <div class="data">
-            <img src="/static/script.png" alt="">
-            <p id="cond">National Identification Number (NIN) Upload</p>
+            <p>&#128504;</p>
+            <p>National Identification Number (NIN) Upload</p>
         </div>
         <a href="">
-            <div class="form">
+            <div class="form" title="Proceed to purchase form">
                 <p>Proceed to Pre-Registration Form</p>
-                <img src="/static/script.png" alt="">
+                <p>&#128504;</p>
             </div>
         </a>
+
     </div>
+    
     
     <div class="final">
         <div class="links-credits">
@@ -98,9 +101,43 @@
     <script>
         function myFunction() {
             document.getElementById('mydropdown').classList.toggle('show');
-            document.getElementById('demo').innerText='Click on menu button to close menu';
-            document.getElementById('demo').classList.toggle('show')
+            document.getElementById('demo').innerText='Click to close menu';
+            document.getElementById('demo').classList.toggle('stop');
         }
+        function topfunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+        var id = null
+        function myMove(){
+            var elem = document.getElementById('myAnimation');
+            var pos = 0
+            clearInterval(id);
+            id = setInterval(frame, 10);
+
+        }
+        clearInterval()
+
+        let interval = setInterval(Start(), 1)
+        function Start(){
+            const date = new Date()
+            document.getElementById('time').innerHTML = date.toLocaleTimeString();
+            document.getElementById('time').style.fontWeight='600';
+        }
+
+        window.onscroll = function() {scrollfunction()};
+        let mybutton = document.getElementById('myBtn');
+        function scrollfunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = 'block'
+            }
+            else {
+                mybutton.style.display = 'none'
+            }
+        }
+
     //     window.onclick = function(event) {
     //     if (!event.target.matches('.dropbtn')) {
     //         var dropdowns = document.getElementsByClassName("dropdown-content");

@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="first-head">
-        <img src="/static/vertical.jpg" alt="">
+        <img src="/static/vertical.jpg" title="Vertical Limit Academy" alt="">
         <a href="facilities/"><p>Facilities</p></a>
         <a href="contact/"><p>Contact</p></a>
         <a href="program/"><p>Program</p></a>
@@ -18,7 +18,7 @@
         <p style="border-bottom: 3px solid rgba(100, 0, 0, 0.8); color: rgba(100, 0, 0, 0.8);">Home</p>
 
         <div class="dropdown">
-            <button onclick="myfunction()" class="dropbtn">
+            <button onclick="myfunction()" title="Click to open menu" class="dropbtn">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -35,13 +35,13 @@
         <h4 id="demo" class="demos"></h4>
     </div>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to Top">Top</button>
+    <button onclick="topFunction()" id="myBtn" title="Go to Top">&#128507;</button>
     <div class="content">
         <div class="first-img">
-            <img width="100%" src="/static/crew.jpg" alt="">
+            <img width="100%" src="/static/j1.jpg" alt="">
             <h1 id="h1" class="glow">VERTICAL LIMIT ACADEMY </h1>
             <h2 id="h2" class="glow">Shining Bright For Christ</h2>
-            <p id="an">Apply Now</p>
+            <a href="admission/"><p id="an">Apply Now</p></a>
         </div>
 
         <div class="main">
@@ -111,7 +111,7 @@
     <script>
         function myfunction() {
             document.getElementById('myDropdown').classList.toggle("show");
-            document.getElementById('demo').innerText='Click on menu button to close menu';
+            document.getElementById('demo').innerText='Click to close menu';
             document.getElementById('demo').classList.toggle('show')
         }
 
@@ -123,7 +123,10 @@
         window.onscroll = function() {scrollFunction()}
         let mybutton = document.getElementById('myBtn');
         function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement > 20) { mybutton.style.display = 'block'; } else {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = 'block'; 
+            } 
+            else {
                 mybutton.style.display = 'none';
                 mybutton.style.border = 'none'
             }

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'home.css' %}">
     <link rel="icon" type="image/x-icon" href="/static/vertical.jpg">
-    <title>Home - Vertical Height Academy International Schools</title>
+    <title>Home - Vertical Limit Academy International Schools</title>
 </head>
 <body>
-    <div class="first-head">
+    <div class="first-head" id="nav-bar">
         <img src="/static/vertical.jpg" title="Vertical Limit Academy" alt="">
         <a href="facilities/"><p>Facilities</p></a>
         <a href="contact/"><p>Contact</p></a>
@@ -18,7 +18,7 @@
         <p style="border-bottom: 3px solid rgba(100, 0, 0, 0.8); color: rgba(100, 0, 0, 0.8);">Home</p>
 
         <div class="dropdown">
-            <button onclick="myfunction()" title="Click to open menu" class="dropbtn">
+            <button id="dropbtn" onclick="myfunction()" title="Click to open menu" class="dropbtn">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -41,7 +41,17 @@
         <div class="first-img">
             <img width="100%" src="/static/j1.jpg" alt="">
             <h1 id="h1" class="glow">VERTICAL LIMIT ACADEMY </h1>
-            <h2 id="h2" class="glow">Shining Bright For Christ</h2>
+            <div class="text-slide">
+                <div class="text-wrap">
+                    <div class="text">
+                        <span><b><i>Vertical Limit Academy</i></b></span>
+                        <span>Shining Bright For Christ</span>
+                        <span>N<u>o</u>7 Lucky Osazee Street,</span>
+                        <span>Off Airport Road,</span>
+                        <span>G.R.A, Benin City, Edo State.</span>
+                    </div>
+                </div>
+            </div>
             <a href="admission/"><p id="an">Apply Now</p></a>
         </div>
 
@@ -110,12 +120,15 @@
     </div>
 
     <script>
+        let button = document.getElementById('dropbtn').innerHTML
         function myfunction() {
             document.getElementById('myDropdown').classList.toggle("show");
             document.getElementById('demo').innerText='Click to close menu';
-            document.getElementById('demo').classList.toggle('show')
-        }
+            document.getElementById('demo').classList.toggle('show');
+            
 
+        }
+        
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;

@@ -2,75 +2,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
+    <title>Python Page</title>
 </head>
 <body>
-    <style>
-        * {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
-        .myBtn div{width: 20px; height: 2px; margin: 3px; background: black;}
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: black;
-            margin-top: 5px;
-            width: 100%;
-            float: left;
-            margin-top: 100px;
-        }
-        .dropdown {
-            float: right;
-            right: 0;
-            margin-top: 23px;
-            background: purple;
-            margin-right: 10px;
-        }
-        .dropdown-content a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            display: block;
-            padding: 10px 20px;
-            width: 100%;
-            transition: 0.3s;
-        }
-        .dropdown-content a:hover{
-            color: purple;
-            transition: 0.3s;
-        }
-        .text{display: none;}
-        .show{display: block;}
 
-        .head p {float: left; color: white; font-size: 22; margin-left: 10px; font-weight: 600;}
-        .head {height: fit-content; transition: 0.3s; background: purple; position: relative;}
-        .height {height: 46%;}
-        .head::after{
-            content: "";
-            clear: both;
-            display: table;
-        }
-    </style>
+    <p id="test" ></p>
+    <p id="num"></p>
 
-    <div class="head" id="head">
-        <p>Urban Haven</p>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="myBtn">
-                <div></div>
-                <div></div>
-                <div></div>
-            </button>
-        </div>
-        <div id="myDropdown" class="dropdown-content">
-            <a href="">Home</a>
-            <a href="">Admission</a>
-            <a href="">About us</a>
-            <a href="">Contact</a>
-            <a href="">Facilities</a>
-        </div>
-    </div>
+
     <script>
-        function myFunction(){
-            document.getElementById('myDropdown').classList.toggle('show');
-            document.getElementById('head').classList.toggle('height');
+        let list = ['Mary','Etima','Donald','Tony','Emana','Harmony']
+        let text = 'inemesit'
+        let num = list.length
+        let i = 0
+        for (let i = 0; i < num;i++){
+            i++
+            document.getElementById('test').innerHTML = 'The Umofia Family have '+ i +' Children<br>'
         }
     </script>
 </body>

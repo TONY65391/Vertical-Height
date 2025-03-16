@@ -15,6 +15,9 @@ def python(request):
     return HttpResponse(template.render(request = request))
 
 def admission(request):
-    print(request)
     template = loader.get_template('admission.html')
+    return HttpResponse(template.render(request = request))
+
+def about(request):
+    template = loader.get_template('about_us.html')
     return HttpResponse(template.render(request = request))

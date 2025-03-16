@@ -1,24 +1,47 @@
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Page</title>
+    <link rel="stylesheet" href="{% static 'python.css' %}">
+    <title>Document</title>
 </head>
 <body>
+    <div id="myNav" class="overlay">
 
-    <p id="test" ></p>
-    <p id="num"></p>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
 
+        <div class="overlay-content">
+            <a href="">About</a>
+            <a href="">Clients</a>
+            <a href="">Associates</a>
+            <a href="">Contacts</a>
+            <a href="">Organisation</a>
+        </div>
+    </div>
+
+    <div class="text-slide">
+        <div class="text-wrap">
+            <div class="text">
+                <span>Vertical Limit Academy</span>
+                <span>Shining Bright For Christ</span>
+                <span>Knowledge For Empowerment</span>
+                <span>Providing A Holistic Serene Environment</span>
+                <span>In GOD We Serve</span>
+            </div>
+        </div>
+    </div>
+
+    <p onclick="openNav()" style="font-size: 25px; cursor: pointer;">&#9776;open</p>
 
     <script>
-        let list = ['Mary','Etima','Donald','Tony','Emana','Harmony']
-        let text = 'inemesit'
-        let num = list.length
-        let i = 0
-        for (let i = 0; i < num;i++){
-            i++
-            document.getElementById('test').innerHTML = 'The Umofia Family have '+ i +' Children<br>'
+        function openNav(){
+            document.getElementById('myNav').style.width = '100%'
         }
+        function closeNav(){
+            document.getElementById('myNav').style.width = '0%'
+        }
+        
     </script>
 </body>
 </html>

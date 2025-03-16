@@ -1,0 +1,85 @@
+.overlay{
+    width: 0;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background: black;
+    z-index: 1;
+    overflow: hidden;
+    height: 100%;
+    transition: 0.6s;
+}
+.overlay-content{
+    text-align: center;
+    position: relative;
+    top: 25%;
+}
+.overlay-content a {
+    display: block;
+    color: #818181;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.overlay-content a:hover{
+    color: red;
+    transition: 0.4s;
+}
+.overlay .closebtn{
+    font-size: 40px;
+    position: relative;
+    right: 0;
+    top: 40px;
+}
+
+
+.text-slide{
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    position: relative;
+}
+.text{
+    position: relative;
+    animation: text-animation ease 8s infinite;
+}
+.text span{
+    display: block;
+    text-align: center;
+}
+@keyframes text-animation{
+    0%{
+        top: 0;
+    }
+    10%{
+        top: 0;
+    }
+    20%{
+        top: -40px;
+    }
+    30%{
+        top: -40px;
+    }
+    40%{
+        top: -80px;
+    }
+    50%{
+        top: -80px;
+    }
+    60%{
+        top: -120px;
+    }
+    70%{
+        top: -120px;
+    }
+    80%{
+        top: -160px;
+    }
+    90%{
+        top: -160px;
+    }
+    100%{
+        top: 0;
+    }
+}

@@ -8,34 +8,32 @@
     <title>Home - Vertical Limit Academy International Schools</title>
 </head>
 <body>
-    <div class="first-head" id="nav-bar">
-        <img src="/static/vertical.jpg" title="Vertical Limit Academy" alt="">
-        <a href="facilities/"><p>Facilities</p></a>
-        <a href="contact/"><p>Contact</p></a>
-        <a href="program/"><p>Program</p></a>
-        <a href="about_us/"><p>About us</p></a>
-        <a href="admission/"><p>Admission</p></a>
-        <p style="border-bottom: 3px solid rgba(100, 0, 0, 0.8); color: rgba(100, 0, 0, 0.8);">Home</p>
 
-        <div class="dropdown">
-            <button id="dropbtn" onclick="myfunction()" title="Click to open menu" class="dropbtn">
-                <div></div>
-                <div></div>
-                <div></div>
-            </button>
-            <div id="myDropdown" class="dropdown-content">
+    <div class="top-nav">
+        <img src="/static/vertical.jpg" alt="Vertical Limit Academy Logo">
+        <div class="sub-links">
+            <a>Home</a>
+            <a href="admission/">Admission</a>
+            <a href="about_us/">About us</a>
+            <a href="program/">Program</a>
+            <a href="contact/">Contact</a>
+            <a href="facilities/">Facilities</a>
+        </div>
+        <div id="overlay" class="overlay">
+            <a onclick="closeNav()" id="closebtn">&times;</a>
+            <div class="overlay-content">
+                <img src="/static/vertical.jpg" alt="Vertical Limit Academy Logo">
                 <a>Home</a>
                 <a href="admission/">Admission</a>
-                <a href="python/">Python</a>
                 <a href="about_us/">About us</a>
                 <a href="program/">Program</a>
                 <a href="contact/">Contact</a>
                 <a href="facilities/">Facilities</a>
             </div>
         </div>
-        <h4 id="demo" class="demos"></h4>
+        
+        <a onclick="openNav()" id="openbtn">&#9776;</a>
     </div>
-
     <button onclick="topFunction()" id="myBtn" title="Go to Top">&#128507;</button>
     <div class="content">
         <div class="first-img">
@@ -63,17 +61,17 @@
     
         <div class="exams-cont">
             <div class="exams">
-                <img src="/static/JUPEB-Logo.png" alt="">
+                <img src="/static/JUPEB-Logo.png" alt="JUPEB LOGO">
                 <h4>A' LEVEL PROGRAM</h4>
                 <h3>JUPEB, IJMB, CAMBRIDGE</h3>
             </div>
             <div class="exams">
-                <img src="/static/JAMB-LOGO.jpg" alt="">
+                <img src="/static/JAMB-LOGO.jpg" alt="JAMB LOGO">
                 <h4>UTME/POST-UTME</h4>
                 <h3>Gain access to experienced tutors</h3>
             </div>
             <div class="exams">
-                <img src="/static/WAEC-LOGO.jpg" alt="">
+                <img src="/static/WAEC-LOGO.jpg" alt="WAEC LOGO">
                 <h4>WAEC/NECO</h4>
                 <h3>Clear your papers in one sitting</h3>
             </div>
@@ -120,13 +118,12 @@
     </div>
 
     <script>
-        let button = document.getElementById('dropbtn').innerHTML
-        function myfunction() {
-            document.getElementById('myDropdown').classList.toggle("show");
-            document.getElementById('demo').innerText='Click to close menu';
-            document.getElementById('demo').classList.toggle('show');
-            
 
+        function openNav(){
+            document.getElementById('overlay').style.width='100%'
+        }
+        function closeNav(){
+            document.getElementById('overlay').style.width = '0'
         }
         
         function topFunction() {

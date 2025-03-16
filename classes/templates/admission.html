@@ -8,22 +8,20 @@
     <link rel="stylesheet" href="{% static 'admission.css' %}">
 </head>
 <body>
-    <div class="first-head">
-        <img src="/static/vertical.jpg" title="Vertical Height Academy" alt="">
-        <a href="facilities/"><p>Facilities</p></a>
-        <a href="contact/"><p>Contact</p></a>
-        <a href="program/"><p>Program</p></a>
-        <a href="about_us/"><p>About us</p></a>
-        <p style="border-bottom: 3px solid rgba(100, 0, 0, 0.8); color: rgba(100, 0, 0, 0.8);">Admission</p>
-        <a href=".."><p>Home</p></a>
-
-        <div class="dropdown">
-            <button onclick="myFunction()" title="Click to open menu" class="dropbtn">
-                <div></div>
-                <div></div>
-                <div></div>
-            </button>
-            <div id="mydropdown" class="dropdown-content">
+    <div class="top-nav">
+        <img src="/static/vertical.jpg" alt="Vertical Limit Academy Logo">
+        <div class="sub-links">
+            <a href="..">Home</a>
+            <a>Admission</a>
+            <a href="about_us/">About us</a>
+            <a href="program/">Program</a>
+            <a href="contact/">Contact</a>
+            <a href="facilities/">Facilities</a>
+        </div>
+        <div id="overlay" class="overlay">
+            <a onclick="closeNav()" id="closebtn">&times;</a>
+            <div class="overlay-content">
+                <img src="/static/vertical.jpg" alt="Vertical Limit Academy Logo">
                 <a href="..">Home</a>
                 <a>Admission</a>
                 <a href="about_us/">About us</a>
@@ -32,7 +30,10 @@
                 <a href="facilities/">Facilities</a>
             </div>
         </div>
-        <h4 id="demo" class="demos"></h4>
+        
+        <a onclick="openNav()" id="openbtn">&#9776;</a>
+    </div>
+
         <button onclick="topfunction()" id="myBtn" title="Go to Top">&#128507;</button>
     </div>
     <img id="start" src="/static/j1_class.jpg" width="100%" alt="">
@@ -72,6 +73,7 @@
             </div>
         </a>
 
+        <button onclick="history.back()">Go back</button>
     </div>
     
     
@@ -99,11 +101,22 @@
     </div>
 
     <script>
+
+        function openNav(){
+            document.getElementById('overlay').style.width = '100%';
+        }
+        function closeNav(){
+            document.getElementById('overlay').style.width = '0';
+        }
         function myFunction() {
             document.getElementById('mydropdown').classList.toggle('show');
             document.getElementById('demo').innerText='Click to close menu';
-            document.getElementById('demo').classList.toggle('stop');
+            let text = document.getElementById('btn').innerHTML
+            if (text ='&#9776;'){
+                text.innerHTML = 'Finally done'
+            }
         }
+
         function topfunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
@@ -137,18 +150,6 @@
             }
         }
 
-        window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-            }
-        }
-    }
     </script>
 </body>
 </html>

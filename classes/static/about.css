@@ -1,0 +1,114 @@
+* {margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+html {scroll-behavior: smooth;}
+.overlay{
+    width: 0;
+    top: 0;
+    position: fixed;
+    left: 0;
+    background: black;
+    z-index: 1;
+    overflow: hidden;
+    height: 100%;
+    transition: 0.6s;
+}
+.overlay-content{
+    text-align: center;
+    position: relative;
+    top: 15%;
+}
+.overlay-content a {
+    display: block;
+    color: #818181;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.overlay-content img{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.overlay-content a:hover, .overlay #closebtn:hover{
+    color: red;
+    transition: 0.4s;
+}
+.overlay #closebtn{
+    color: white; 
+    font-size: 30px; 
+    left: 90%; 
+    position: relative; 
+    cursor: pointer;
+    top: 5%;
+    transition: 0.4s;
+}
+.top-nav{
+    background: white;
+    width: 100%;
+    box-shadow: 0px 4px 15px black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-bottom: 1vw;
+    position: fixed;
+    z-index: 1;
+}
+.top-nav::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.top-nav img{
+    float: left;
+    width: 7vw;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.sub-links{
+    width: 80vw;
+    float: right;
+    margin: auto;
+    margin-top: 3vw;
+    margin-left: 2vw;
+}
+.sub-links a{
+    text-decoration: none;
+    font-size: 1.8vw;
+    width: fit-content;
+    padding: 0 10px 5px 10px;
+    color: black;
+    font-weight: 600;
+    transition: 0.2s;
+    margin: 5px;
+}
+.sub-links a:hover{
+    border-bottom: 2px solid rgba(90, 19, 19, 0.8);
+    transition: 0.2s;
+    color: rgba(90, 19, 19, 0.8);
+}
+.sub-links a:nth-child(3){
+    border-bottom: 2px solid rgba(90, 19, 19, 0.8);
+    color: rgba(90, 19, 19, 0.8);
+}
+.overlay a:nth-child(4){
+    color: rgba(1000, 19, 19, 0.7);
+}
+#openbtn{
+    font-size: 25px; 
+    text-align: right; 
+    width: fit-content;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    top: 30%;
+}
+
+@media screen and (max-width:800px) {
+    .sub-links {display: none;}
+    .top-nav img{margin-right: 75%; width: 12vw;}
+    .top-nav {height: 16vw;}    
+}
+@media screen and (min-width:801px) {
+    #openbtn{display: none;}    
+}

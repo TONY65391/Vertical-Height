@@ -1,14 +1,12 @@
 * {margin: 0; padding: 0%; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 html {scroll-behavior: smooth;}
-.first-head {transition: 0.6s; padding: 20px; width: 100%; background: white; margin-bottom: 10px; z-index: 1; box-shadow: 3px 5px 15px black; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; }
-.first-head p {float: right; color: black; padding: 0px 20px 10px 20px; transition: 0.2s; margin: 2vw 10px 1vw 10px; font-weight: 700;}
-.first-head p:hover {border-bottom: 3px solid rgba(100, 0, 0, 0.8); transition: 0.2s; color: rgba(100, 0, 0, 0.8);}
-.first-head img {width: 5vw; float: left; margin-top: 1vh;}
 
-.first-head::after {
-    content: "";
-    clear: both;
-    display: table;
+.top-nav img{
+    float: left;
+    width: 7vw;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: 0.3s;
 }
 
 .content {width: 90%; margin: auto; transition: 0.5s;}
@@ -46,9 +44,7 @@ html {scroll-behavior: smooth;}
 #start {border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;}
 #myBtn {position: fixed; bottom: 30px; right: 20px; color: white; padding: 12px; background: rgb(250, 111, 111); border-radius: 8px; border: none; font-size: 15px; transition: 0.3s; z-index: 1;}
 #myBtn:hover {background: rgb(252, 71, 71); transition: 0.3s;}
-@media screen and (max-width:840px) {
-    .first-head p {display: none;}
-    .first-head img {width: 11vw; margin-top: 0;}
+@media screen and (max-width:800px) {
     .content {width: 90%;}    
     .content p,h4,h2 {font-size: 2.8vw; line-height: 5vh;}
     .data img {width: 37px; margin-top: 1vh;}
@@ -58,11 +54,12 @@ html {scroll-behavior: smooth;}
     .contacts {font-size: 2vw; float: right; margin: 0; width: fit-content; margin-top: 50px; margin-right: 30px;}
     .form img {margin-top: 2vh;}
     .credit p, .contacts p { font-weight: 700;}
-
+    .sub-links {display: none;}
+    .top-nav img{margin-right: 75%; width: 12vw;}
+    .top-nav {height: 16vw;}
 }
-@media screen and (min-width:840px) {
-    .dropdown{display: none;} 
-    .first-head h4 {display: none;}   
+@media screen and (min-width:801px) {
+    #openbtn{display: none;}    
 }
 
 .data::after{
@@ -71,48 +68,100 @@ html {scroll-behavior: smooth;}
     display: table;
 }
 
-.dropdown{
-    float: right;
-    position: relative;
-    margin-top: 3vw;
-}
-.dropbtn {
-    border: none;
-    padding: 5px;
-    background: transparent;
-}
-.dropbtn div{
-    height: 2px;
-    margin: 3px;
+.overlay{
+    width: 0;
+    top: 0;
+    position: fixed;
+    left: 0;
     background: black;
-    width: 20px;
-    border-radius: 15px;
-}
-.dropdown-content {
-    display: none;
-    background: black;
-    right: 0;
-    height: auto;
     z-index: 1;
-    border-radius: 10px;
-    position: absolute;
-    margin-top: 10px;
-    width: 150px;
+    overflow: hidden;
+    height: 100%;
+    transition: 0.6s;
 }
-.dropdown-content a {
-    color: white;
-    display: block;
-    padding: 10px;
-    width: 100%;
+.overlay-content{
     text-align: center;
-    text-decoration: none;
-    transition: 0.5s;
-    font-weight: 600;
-    font-size: 13px;
+    position: relative;
+    top: 15%;
 }
-.dropdown-content a:hover {
+.overlay-content a {
+    display: block;
+    color: #818181;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.overlay-content img{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.overlay-content a:hover, .overlay #closebtn:hover{
     color: red;
-    transition: 0.5s;
+    transition: 0.4s;
+}
+.overlay #closebtn{
+    color: white; 
+    font-size: 30px; 
+    left: 90%; 
+    position: relative; 
+    cursor: pointer;
+    top: 5%;
+    transition: 0.4s;
+}
+.top-nav{
+    background: white;
+    width: 100%;
+    box-shadow: 0px 4px 15px black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-bottom: 1vw;
+    position: fixed;
+    z-index: 1;
+}
+.top-nav::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.sub-links{
+    width: 80vw;
+    float: right;
+    margin: auto;
+    margin-top: 3vw;
+    margin-left: 2vw;
+}
+.sub-links a{
+    text-decoration: none;
+    font-size: 1.8vw;
+    width: fit-content;
+    padding: 0 10px 5px 10px;
+    color: black;
+    font-weight: 600;
+    transition: 0.2s;
+    margin: 5px;
+}
+.sub-links a:hover{
+    border-bottom: 2px solid rgba(90, 19, 19, 0.8);
+    transition: 0.2s;
+    color: rgba(90, 19, 19, 0.8);
+}
+.sub-links a:nth-child(2){
+    border-bottom: 2px solid rgba(90, 19, 19, 0.8);
+    color: rgba(90, 19, 19, 0.8);
+}
+.overlay-content a:nth-child(3){
+    color: rgba(1000, 19, 19, 0.7);
+}
+#openbtn{
+    font-size: 25px; 
+    text-align: right; 
+    width: fit-content;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    top: 30%;
 }
 .demos {display: none; float: right; right: 0; margin-top: 3vw; margin-right: 10px;}
 .show {display: block;}

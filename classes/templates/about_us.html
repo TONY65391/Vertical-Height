@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/vertical.jpg">
     <link rel="stylesheet" href="{% static 'about.css' %}">
     <title>About us - Vertical Limit Academy</title>
 </head>
@@ -10,37 +11,79 @@
     <div class="top-nav">
         <img src="/static/vertical.jpg" alt="Vertical Limit Academy Logo">
         <div class="sub-links">
-            <a href="home/" target="_blank">Home</a>
-            <a href="admission/">Admission</a>
-            <a href="about_us/">About us</a>
-            <a href="program/">Program</a>
-            <a href="contact/">Contact</a>
-            <a href="facilities/">Facilities</a>
+            <a href="home">Home</a>
+            <a href="admission">Admission</a>
+            <a href="about_us">About us</a>
+            <a href="program">Program</a>
+            <a href="contact">Contact</a>
+            <a href="facilities">Facilities</a>
         </div>
         <div id="overlay" class="overlay">
             <a onclick="closeNav()" id="closebtn">&times;</a>
             <div class="overlay-content">
                 <img src="/static/vertical.jpg" alt="Vertical Limit Academy Logo">
-                <a href="..">Home</a>
-                <a href="admission/">Admission</a>
+                <a href="home">Home</a>
+                <a href="admission">Admission</a>
                 <a>About us</a>
-                <a href="program/">Program</a>
-                <a href="contact/">Contact</a>
-                <a href="facilities/">Facilities</a>
+                <a href="program">Program</a>
+                <a href="contact">Contact</a>
+                <a href="facilities">Facilities</a>
             </div>
         </div>
-        
         <a onclick="openNav()" id="openbtn">&#9776;</a>
     </div>
 
+    
+    <div class="top-img">
+        <img src="/static/teammates.jpg" alt="">
+        <div class="text-slide">
+            <div class="text-wrap">
+                <div class="text">
+                    <span><b>Vertical Limit Academy</b></span>
+                    <span>We provide a holistic and serene environment</span>
+                    <span>Free of any form of violence</span>
+                    <span>With our qualified, kind and professional teachers</span>
+                    <span>Through our faith in our <b>LORD JESUS CHRIST</b></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script>
-        function openNav(){
-            document.getElementById('overlay').style.width = '100%'
-        }
-        function closeNav(){
-            document.getElementById('overlay').style.width = '0%'
-        }
-    </script>
+    <div class="content">
+        <div class="students">
+            <img src="/static/j2&j1.jpg" width="100%" alt="">
+            <p>Lovely students of VERTICAL LIMIT ACADEMY</p>
+        </div>
+
+        <div class="message">
+            <h3>Message from our Coordinator</h3>
+            <p>I have the pleasure of introducing you to our team of devoted and highly skilled teachers who are committed to helping students from all backgrounds achieve their maximum academic potential in all subject areas.</p>
+            
+            <p>Every student has the potential to achieve, and at <b>Vertical Limit Academy</b> we work to foster an environment where they can flourish and realize their potential. Our tutors are subject matter specialists who are committed to offering individualized education that is catered to each student's particular needs and learning preferences.</p>
+
+            <p>I am proud of the track record of academic success that we have achieved at <b>Vertical Limit Academy</b>, and I am confident that our team can help you reach your full potential. If you have any questions or would like to learn more about our programs, please don’t hesitate to contact us.</p>
+        </div>
+
+        <div class="core-values">
+            <h3>Our Core Values</h3>
+            <h5>What Values We Provide</h5>
+            <p>We at <b>Vertical Limit Academy</b> take great satisfaction from the fact that we consistently assist students in achieving academic achievement. We have assisted countless students in raising their grades, gaining more self-assurance, and becoming ready for the next stage of their educational endeavors. We offer the means and knowledge to support you in achieving your goals, whether you're having difficulty with a specific subject or want to advance in your studies.</p>
+
+            <div class="facilities">
+                <img src="/static/CBT Training.jpg" alt="">
+                <h2>CBT Training Centre</h2>
+            </div>
+            <div class="facilities">
+                <img src="/static/Competent_Teachers.jpg" alt="">
+                <h2>Competent Teachers</h2>
+            </div>
+            <div class="facilities">
+                <img src="/static/Class_Room.jpg" alt="">
+                <h2>Conducive Class Rooms</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/index.js"></script>
 </body>
 </html>

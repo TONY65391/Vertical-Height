@@ -1,4 +1,4 @@
-* {margin: 0; padding: 0%; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+* {user-select: none; margin: 0; padding: 0%; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 html {scroll-behavior: smooth;}
 
 .top-nav img{
@@ -82,7 +82,7 @@ html {scroll-behavior: smooth;}
 .overlay-content{
     text-align: center;
     position: relative;
-    top: 15%;
+    top: 30%;
 }
 .overlay-content a {
     display: block;
@@ -104,8 +104,8 @@ html {scroll-behavior: smooth;}
 .overlay #closebtn{
     color: white; 
     font-size: 30px; 
-    left: 90%; 
-    position: relative; 
+    right: 33px; 
+    position: absolute; 
     cursor: pointer;
     top: 5%;
     transition: 0.4s;
@@ -162,9 +162,12 @@ html {scroll-behavior: smooth;}
     cursor: pointer;
     position: relative;
     top: 30%;
+    transition: all ease-in-out 0.5s;
 }
-.demos {display: none; float: right; right: 0; margin-top: 3vw; margin-right: 10px;}
-.show {display: block;}
+#openbtn:hover{
+    color: red;
+    transition: all ease-in-out 0.3s;
+}
 .data p{float: left;}
 .data:hover p{color: rgba(1000, 0, 0, 0.9);}
 .data, .data.p{width: fit-content;}

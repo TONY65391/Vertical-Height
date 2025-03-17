@@ -1,20 +1,20 @@
-* {margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+* {user-select: none; padding: 0; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 html {scroll-behavior: smooth;}
 .overlay{
-    width: 0;
+    width: 100%;
     top: 0;
     position: fixed;
     left: 0;
     background: black;
     z-index: 1;
     overflow: hidden;
-    height: 100%;
+    height: 0;
     transition: 0.6s;
 }
 .overlay-content{
     text-align: center;
     position: relative;
-    top: 15%;
+    top: 30%;
 }
 .overlay-content a {
     display: block;
@@ -36,8 +36,8 @@ html {scroll-behavior: smooth;}
 .overlay #closebtn{
     color: white; 
     font-size: 30px; 
-    left: 90%; 
-    position: relative; 
+    right: 30px;
+    position: absolute;
     cursor: pointer;
     top: 5%;
     transition: 0.4s;
@@ -102,13 +102,136 @@ html {scroll-behavior: smooth;}
     cursor: pointer;
     position: relative;
     top: 30%;
+    transition: all 0.3s ease;
+}
+#openbtn:hover{
+    color: red;
+    transition: all 0.3s ease;
+}
+.text-slide{
+    height: 4vw;
+    line-height: 4vw;
+    overflow: hidden;
+    position: absolute;
+    color: white;
+    top: 40%;
+    font-size: 3vw;
+    transition: 0.4s;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.text span{
+    display: block;
+    text-align: center;
+    
+}
+.text{
+    position: absolute;
+    animation: text-animation ease 8s infinite;
+    width: fit-content;
+    margin-left: 15%;
+}
+.top-img {
+    position: relative;
+    margin-bottom: 5vw;
+}
+.top-img img{
+    width: 100%;
+}
+@keyframes text-animation{
+    0%{
+        top: 0%;
+    }
+    10%{
+        top: 0%;
+    }
+    20%{
+        top: -4vw;
+    }
+    30%{
+        top: -4vw;
+    }
+    40%{
+        top: -8vw;
+    }
+    50%{
+        top: -8vw;
+    }
+    60%{
+        top: -12vw;
+    }
+    70%{
+        top: -12vw;
+    }
+    80%{
+        top: -16vw;
+    }
+    90%{
+        top: -16vw;
+    }
+    100%{
+        top: 0%;
+    }
 }
 
+.students p{
+    font-size: 15px;
+    color: rgb(117, 116, 116);
+    width: fit-content;
+    margin: auto;
+}
+.students img{border-radius: 15px;}
+.facilities{
+    margin-top: 30px;
+}
+.facilities:hover h2{
+    background: rgba(90, 19, 19, 0.8);
+    color: white;
+}
+.facilities h2{
+    width: 300px;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    font-size: 3vw;
+}
 @media screen and (max-width:800px) {
     .sub-links {display: none;}
     .top-nav img{margin-right: 75%; width: 12vw;}
-    .top-nav {height: 16vw;}    
+    .top-nav {height: 16vw;}   
+    .text-slide{top: 50%; transition: 0.4s;} 
+    .top-img {padding-top: 70px;}
+    .top-img img {border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;}
+    .message h3,p {width: 85%; margin: auto;}
+    .message h3 {margin-top: 20px; text-align: center; line-height: 40px; color: rgba(90, 19, 19, 0.8);}
+    .message p {line-height: 30px; margin-top: 30px;}
+    .content b {color: rgba(90, 19, 19, 0.8);}
+    .content img:nth-child(1){
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
+    .core-values{
+        width: 85%; 
+        margin-right: auto; 
+        margin-left: auto; 
+        display: block;
+        margin-top: 40px;
+    }
+    .core-values h3,h5{
+        line-height: 40px; 
+        text-align: center; 
+        font-size: 4vw; 
+        color: rgba(90, 19, 19, 0.8);
+    }
+    .core-values p{
+        line-height: 30px;
+        word-spacing: 7px;
+    }
 }
+    
 @media screen and (min-width:801px) {
     #openbtn{display: none;}    
 }

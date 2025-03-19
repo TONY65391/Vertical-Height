@@ -1,5 +1,6 @@
-* {user-select: none; padding: 0; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+* {user-select: none; padding: 0; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; transition: 0.4s;}
 html {scroll-behavior: smooth;}
+p{line-height: 35px;}
 .overlay{
     width: 100%;
     top: 0;
@@ -175,6 +176,45 @@ html {scroll-behavior: smooth;}
     }
 }
 
+
+.facilities{
+    margin-top: 30px;
+    float: left; 
+    width: 30%;
+    margin-right: 24px;
+}
+.facilities h2{
+    width: 88%;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    font-size: 2vw;
+    transition: 0.3s;
+}
+.facilities:hover h2{
+    background: rgba(90, 19, 19, 0.8);
+    color: white;
+}
+.facilities img{transition: all ease-in-out 0.3s; width: 100%;}
+.facilities:hover img{
+    transform: scale(1.1);
+    transition: all ease-in-out 0.3s;
+    border-radius: 15px;
+}
+.facilities:last-child{
+    margin-bottom: 50px;
+}
+
+.final::after, .container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.content {width: 95%; margin: auto;}
+.content b , h2{color: rgba(90, 19, 19, 0.8); text-align: center;}
+.students {width: 45%; float: left;}
+.container {width: 100%;}
 .students p{
     font-size: 15px;
     color: rgb(117, 116, 116);
@@ -182,20 +222,84 @@ html {scroll-behavior: smooth;}
     margin: auto;
 }
 .students img{border-radius: 15px;}
-.facilities{
+.message {width: 50%; margin-left: 10px; font-size: 20px; float: right; line-height: 10vh;}
+
+
+.message h3 {margin-top: 20px; text-align: center; line-height: 40px; color: rgba(90, 19, 19, 0.8);}
+.message p{line-height: 6vh; margin-top: 20px; text-align: center;}
+
+.core-values {
+    float: left; 
+    width: 43%; 
+    font-size: 20px; 
+    margin-top: 20px; 
+    text-align: center; 
+    box-shadow: 2px 2px 4px rgb(150, 149, 149); padding-bottom: 10px; padding-right: 30px; border-top-right-radius: 15px; border-bottom-right-radius: 15px;
+}
+.core-values h3,h5{margin-bottom: 20px; color: rgba(90, 19, 19, 0.8); font-size: 3vw;}
+
+.core-values h5{font-size: 2.5vw;}
+
+.success-stories{float: right; width: 65%; text-align: center; font-size: 20px;}
+.success-stories p{margin-top: 20px;}
+
+
+.contacts {
+    width: 48%; 
+    float: left; 
+    margin-right: 5px;
+    text-align: center;
+}
+.contacts h3{color: rgba(90, 19, 19, 0.8);
+margin-bottom: 20px; text-decoration: underline;}
+.contacts p{margin: 0; text-align: center;}
+.contacts:nth-child(3), .contacts:nth-child(2){
+    margin-bottom: 5px;
     margin-top: 30px;
 }
-.facilities:hover h2{
-    background: rgba(90, 19, 19, 0.8);
-    color: white;
+
+
+.final{
+    width: 100%; 
+    margin-top: 60px; 
+    box-shadow: 2px 2px 30px black; border-top-right-radius: 15px; border-top-left-radius: 15px;
 }
-.facilities h2{
-    width: 300px;
-    margin: auto;
-    padding: 15px;
-    text-align: center;
-    font-size: 3vw;
+
+.final-links p, .final-links a{
+    width: fit-content; 
+    margin: auto; 
+    display: block; 
+    text-decoration: none; 
+    color: black; 
+    padding: 2px 20px; 
+    text-align: center; 
+    margin-bottom: 5px; 
+    font-weight: 600;
 }
+.final-links p:hover {border-bottom: 2px solid rgba(90, 19, 19, 0.8); color: rgba(90, 19, 19, 0.8);}
+
+.final-links {
+    width: 90%; 
+    border-bottom: 1px solid rgb(167, 164, 164); 
+    padding-bottom: 20px; 
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    padding-top: 20px;
+}
+.final-links a, .final-links p{
+    display: inline;
+    width: fit-content;   
+    padding-bottom: 5px;
+}
+.final-links a:nth-child(3), .final-links p:nth-child(3){
+    border-bottom: 2px solid rgba(90, 19, 19, 0.8);
+    color: rgba(90, 19, 19, 0.8);
+}
+
+#myBtn {position: fixed; bottom: 30px; right: 20px; color: white; padding: 12px; background: rgb(250, 111, 111); border-radius: 8px; border: none; font-size: 15px; transition: 0.3s; z-index: 1;}
+#myBtn:hover {background: rgb(252, 71, 71); transition: 0.3s;}
 @media screen and (max-width:800px) {
     .sub-links {display: none;}
     .top-nav img{margin-right: 75%; width: 12vw;}
@@ -204,9 +308,16 @@ html {scroll-behavior: smooth;}
     .top-img {padding-top: 70px;}
     .top-img img {border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;}
     .message h3,p {width: 85%; margin: auto;}
-    .message h3 {margin-top: 20px; text-align: center; line-height: 40px; color: rgba(90, 19, 19, 0.8);}
-    .message p {line-height: 30px; margin-top: 30px;}
-    .content b {color: rgba(90, 19, 19, 0.8);}
+    .message p {margin-top: 30px;}
+    .facilities,.message, .core-values {
+        float: none; 
+        width: 100%;
+    }
+    .facilities h2{
+        font-size: 3vw;
+        width: 80%;
+    }
+    
     .content img:nth-child(1){
         width: 80%;
         margin-right: auto;
@@ -214,11 +325,14 @@ html {scroll-behavior: smooth;}
         display: block;
     }
     .core-values{
-        width: 85%; 
+        width: 94%; 
         margin-right: auto; 
         margin-left: auto; 
         display: block;
         margin-top: 40px;
+        box-shadow: none;
+        padding: 0;
+        text-align: left;
     }
     .core-values h3,h5{
         line-height: 40px; 
@@ -229,6 +343,35 @@ html {scroll-behavior: smooth;}
     .core-values p{
         line-height: 30px;
         word-spacing: 7px;
+        font-size: 3vw;
+    }
+
+
+    .students, .success-stories {width: 100%; text-align: left; font-size: 3vw;}
+    .success-stories h2{font-size: 3vw; margin-top: 20px;}
+    .message p,h3{font-size: 3vw;}
+
+    .contacts, .final-links {width: 49%;}
+    .contacts{
+        margin-top: 30px; 
+        box-shadow: 2px 2px 5px rgb(119, 116, 116); padding-bottom: 10px; 
+        border-top-right-radius: 10px; border-bottom-right-radius: 10px;
+        float: right;
+        font-size: 3vw;
+    }
+    .contacts p{margin: auto;}
+    .contacts h3 {width: fit-content; margin: auto; text-decoration: underline; color: rgba(90, 19, 19, 0.8);}
+    .final-links {
+        border-top-right-radius: 10px; border-bottom-right-radius: 10px; 
+        margin-top: 50px; 
+        box-shadow: 2px 2px 5px rgb(119, 116, 116);
+        float: left;
+        text-align: center;
+        font-size: 3vw;
+    }
+    .final-links a, .final-links p{
+        display: block;
+        font-size: 3vw;
     }
 }
     

@@ -34,7 +34,7 @@
         <a onclick="openNav()" id="openbtn">&#9776;</a>
     </div>
 
-        <button onclick="topfunction()" id="myBtn" title="Go to Top">&#128507;</button>
+        <button onclick="topFunction()" id="myBtn" title="Go to Top">&#128507;</button>
     </div>
     <img id="start" src="/static/j1_class.jpg" width="100%" alt="">
     <div class="content">
@@ -74,80 +74,38 @@
         </a>
     </div>
     
-    
     <div class="final">
-        <div class="links-credits">
-            <div class="final-links">
-                <a href=".."><p>Home</p></a>
-                <p style="color: rgba(1000, 0, 0, 0.8); border-bottom: 3px solid rgba(1000, 0, 0, 0.8);">Admission</p>
-                <a href="about_us"><p>About us</p></a>
-                <a href="program"><p>Program</p></a>
-                <a href="contact"><p>Contact</p></a>
-                <a href="facilities"><p>Facilities</p></a>
-            </div>
+        <div class="final-links">
+            <a href="home" title="Home"><p>Home</p></a>
+            <a href="admission"><p>Admission</p></a>
+            <a href="about_us"><p title="About us">About us</p></a>
+            <a href="program" title="Programmes"><p>Program</p></a>
+            <a href="contact" title="Contact us"><p>Contact</p></a>
+            <a href="facilities" title="Our facilities"><p>Facilities</p></a>
         </div>
-        <div>
-            <div class="contacts">
-                <p>+23438776537</p>
-                <p id="last">+23425468909</p>
-                <div class="credit">
-                    <p>Copyright @ Vertical Height Academy</p>
-                    <p>Developer ~ ANONYMOUS</p>
-                </div>
-            </div>
+        <div class="contacts">
+            <h3>Contacts</h3>
+            <p>+23438776537</p>
+            <p id="last">+23425468909</p>
+            <p>Copyright @ Vertical Limit Academy</p>
+            <p style="color: rgba(90, 19, 19, 0.8); font-weight: 600;">Developer ~ ANONYMOUS</p>
         </div>
-    </div>
-
+        <div class="contacts">
+            <h3>Location</h3>
+            <p>N<u>O</u> 7 Lucky Osazee Street, Off Airport Road, After Estate Gate, Besides DVD Filling Station, G.R.A, Benin City, Edo State.</p>
+        </div>
+    
     <script>
-
-        function openNav(){
-            document.getElementById('overlay').style.width = '100%';
-        }
-        function closeNav(){
-            document.getElementById('overlay').style.width = '0';
-        }
-        function myFunction() {
-            document.getElementById('mydropdown').classList.toggle('show');
-            document.getElementById('demo').innerText='Click to close menu';
-            let text = document.getElementById('btn').innerHTML
-            if (text ='&#9776;'){
-                text.innerHTML = 'Finally done'
+        window.onscroll = function() {scrollfunction()}
+        function scrollfunction(){
+            mybutton = document.getElementById('myBtn');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                mybutton.style.display = 'block';
+            }else{
+                mybutton.style.display = 'none';
             }
         }
-
-        function topfunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
-        var id = null
-        function myMove(){
-            var elem = document.getElementById('myAnimation');
-            var pos = 0
-            clearInterval(id);
-            id = setInterval(frame, 10);
-
-        }
-        clearInterval()
-
-        let interval = setInterval(Start(), 1)
-        function Start(){
-            const date = new Date()
-            document.getElementById('time').innerHTML = date.toLocaleTimeString();
-            document.getElementById('time').style.fontWeight='600';
-        }
-
-        window.onscroll = function() {scrollfunction()};
-        let mybutton = document.getElementById('myBtn');
-        function scrollfunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = 'block'
-            }
-            else {
-                mybutton.style.display = 'none'
-            }
-        }
-
     </script>
+    <script src="/static/index.js"></script>
 </body>
 </html>

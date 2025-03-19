@@ -105,28 +105,37 @@
     </div> 
 
     <div class="final">
-        <div class="links-credits">
-            <div class="final-links">
-                <p style="color: rgba(1000, 0, 0, 0.8); border-bottom: 3px solid rgba(1000, 0, 0, 0.8);">Home</p>
-                <a href="admission/"><p>Admission</p></a>
-                <a href="about_us/"><p>About us</p></a>
-                <a href="program/"><p>Program</p></a>
-                <a href="contact/"><p>Contact</p></a>
-                <a href="facilities/"><p>Facilities</p></a>
-            </div>
+        <div class="final-links">
+            <a href="home" title="Home"><p>Home</p></a>
+            <a href="admission"  title="Admission"><p>Admission</p></a>
+            <a><p>About us</p></a>
+            <a href="program" title="Programmes"><p>Program</p></a>
+            <a href="contact" title="Contact us"><p>Contact</p></a>
+            <a href="facilities" title="Our facilities"><p>Facilities</p></a>
         </div>
-        <div>
-            <div class="contacts">
-                <p>+23438776537</p>
-                <p id="last">+23425468909</p>
-                <div class="credit">
-                    <p>Copyright @ Vertical Height Academy</p>
-                    <p>Developer ~ ANONYMOUS</p>
-                </div>
-            </div>
+        <div class="contacts">
+            <h3>Contacts</h3>
+            <p>+23438776537</p>
+            <p id="last">+23425468909</p>
+            <p>Copyright @ Vertical Limit Academy</p>
+            <p style="color: rgba(90, 19, 19, 0.8); font-weight: 600;">Developer ~ ANONYMOUS</p>
         </div>
-    </div>
+        <div class="contacts">
+            <h3>Location</h3>
+            <p>N<u>O</u> 7 Lucky Osazee Street, Off Airport Road, After Estate Gate, Besides DVD Filling Station, G.R.A, Benin City, Edo State.</p>
+        </div>
 
+    <script>
+        window.onscroll = function() {scrollfunction()}
+        function scrollfunction(){
+            mybutton = document.getElementById('myBtn');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                mybutton.style.display = 'block';
+            }else{
+                mybutton.style.display = 'none';
+            }
+        }
+    </script>
     <script src="/static/index.js"></script>
 </body>
 </html>

@@ -57,25 +57,85 @@ h3 {font-size: 2vw;}
 .exams-cont {width: 80%; margin: auto; margin-top: 3vh;}
 
 
-.final {float: left; width: 100%; box-shadow: 0px 0px 30px black; margin-top: 50px; border-top-left-radius: 15px; border-top-right-radius: 15px;}
-.final-links a, .first-head a{color: black; text-decoration: none;}
-.final-links p {width: fit-content; float: left; margin: 5px; font-size: 1.2vw; font-weight: 700; margin-bottom: 20px; padding: 12px; margin-top: 30px; transition: 0.2s;}
-.final-links {height: auto; border: none; width: 50%; float: left; margin: 0; margin-top: 30px; margin-left: 10px; padding-bottom: 0px;}
-.final-links p:hover {border-bottom: 3px solid rgba(100, 0, 0, 0.8); transition: 0.2s; color: rgba(100, 0, 0, 0.8);}
-.contacts {width: 45%; font-size: 1.5vw; float: right; margin: 0; margin-top: 50px; margin-right: 30px; text-align: center;}
-#last { border-bottom: 1px solid black; padding-bottom: 5px;}
-.credit {margin-top: 10px;}
-.data img {width: 37px; margin-top: 2.2vh;}
-.final-links::after{
-    clear: both;
-    display: table;
-    content: "";
+.contacts {
+    width: 48%; 
+    float: left; 
+    margin-right: 5px;
+    text-align: center;
 }
+.contacts h3{color: rgba(90, 19, 19, 0.8);
+margin-bottom: 20px; text-decoration: underline;}
+.contacts p{margin: 0; text-align: center; line-height: 40px;}
+.contacts:nth-child(3), .contacts:nth-child(2){
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
+
+.final{
+    width: 100%; 
+    margin-top: 60px; 
+    box-shadow: 2px 2px 30px black; border-top-right-radius: 15px; border-top-left-radius: 15px;
+    float: left;
+}
+
+.final-links p, .final-links a{
+    width: fit-content; 
+    margin: auto; 
+    display: block; 
+    text-decoration: none; 
+    color: black; 
+    padding: 2px 20px; 
+    text-align: center; 
+    margin-bottom: 5px; 
+    font-weight: 600;
+}
+.final-links p:hover {border-bottom: 2px solid rgba(90, 19, 19, 0.8); color: rgba(90, 19, 19, 0.8);}
+
+.final-links {
+    width: 90%; 
+    border-bottom: 1px solid rgb(167, 164, 164); 
+    padding-bottom: 30px; 
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+.final-links a, .final-links p{
+    display: inline;
+    width: fit-content;   
+    padding-bottom: 5px;
+    line-height: 35px;
+}
+.final-links a:nth-child(1), .final-links p:nth-child(0){
+    border-bottom: 2px solid rgba(90, 19, 19, 0.8);
+    color: rgba(90, 19, 19, 0.8);
+}
+
 @media screen and (max-width:800px) {
-    .final {width: 100%;}
-    .final-links {height: auto; border: none; width: 40%; float: left; margin: 0; margin-top: 30px; margin-left: 10px; padding-bottom: 0px;}
-    .final-links p {margin-bottom: 0px; float: left; margin: 0; width: fit-content; margin: auto; height: 40px; margin-top: 10px; display: block; text-align: center; font-size: 2vw;}
-    .contacts {font-size: 2vw; float: right; margin: 0; margin-top: 50px; margin-right: 30px;}
+    .contacts, .final-links {width: 49%;}
+    .contacts{
+        margin-top: 30px; 
+        box-shadow: 2px 2px 5px rgb(119, 116, 116); padding-bottom: 10px; 
+        border-top-right-radius: 10px; border-bottom-right-radius: 10px;
+        float: right;
+    }
+    .contacts p{margin: auto; line-height: 30px;}
+    .contacts h3 {width: fit-content; margin: auto; margin-bottom: 20px; text-decoration: underline; color: rgba(90, 19, 19, 0.8);}
+    .final-links {
+        border-top-right-radius: 10px; border-bottom-right-radius: 10px; 
+        margin-top: 50px; 
+        box-shadow: 2px 2px 5px rgb(119, 116, 116);
+        float: left;
+        text-align: center;
+    }
+    .final-links a, .final-links p{
+        display: block;
+    }
+
+
     #h1 {top: 30%; transition: 0.5s; font-size: 5vw; transition: 0.6s;}   
     #h2 {top: 47%; font-size: 4vw; transition: 0.6s;}
     .first-img img {height: auto;}
@@ -94,8 +154,6 @@ h3 {font-size: 2vw;}
     #rm {padding: 2vw 3vw; font-size: 2.5vw;}
     #rm:hover {padding: 1vw 2vw;}
     .cont {width: 95%;}
-    #last {border-bottom: 1px solid black; margin-bottom: 5px; padding-bottom: 5px;}
-    .credit p, .contacts p { font-weight: 600;}
     .sub-links{display: none;}
     .top-nav img{margin-right: 75%; width: 12vw;}
     .top-nav {height: 16vw;}
